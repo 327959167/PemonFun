@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../login/images/logoTitle.jpg" rel="shortcut icon">
+    <title>柚乐趣登录页面</title>
+    <script src="../common-css/js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="../common-css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../login/css/login.css">
+    <link rel="stylesheet" href="../common-css/login-register.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="container loginBox">
+            <img src="./images/logoTitle2.jpg" class="Oimg">
+            <div class="txt">
+                <h1>柚乐趣</h1>
+                <h4>(oﾟ▽ﾟ)o 柚乐趣发现你的乐趣(｀・ω・´)</h4>
+            </div>
+            <div class="loginForm">
+                <form action="" id="app">
+                    <!-- 表单信息的填写 -->
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">邮箱</label>
+                        <input type="email" class="form-control Input" placeholder="Please enter you email" v-model="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">密码</label>
+                        <input type="password" class="form-control Input" placeholder="Please enter you password" v-model="password">
+                    </div>
+                    <!-- 表单信息的填写 -->
+                    <!-- 登录、注册按钮 -->
+                    <a class="btn btn-success btn-lg active sub" role="button" @click="checked()">登录</a>
+                    <a href="../register/register.html" class="btn btn-primary btn-lg active" role="button">注册</a>
+                    <!-- 登录、注册按钮 -->
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/vue.min.js"></script>
+<script src="./js/login.js"></script>
+
+    
+
+</html>

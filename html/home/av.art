@@ -1,0 +1,47 @@
+{{extend '../../html/common-css/common-view/common.art'}}
+
+{{block 'title'}}
+    <title>柚乐趣影音页面</title>
+{{/block}}
+
+{{block 'navbar'}}
+    <li><a href="/graphic">图文</a></li>
+    <li class="active"><a href="/av">影音</a></li>
+    <li><a href="/other">其他</a></li>
+    <li><a href="#">新增</a></li>
+{{/block}}
+
+
+{{block 'frame'}}
+    <li class="ActiveCbl"><a href="/funny" class="active" target="frame">搞笑</a></li>
+    <li class="ActiveCbl"><a href="../home/av/zhiyu.html" target="frame">治愈</a></li>
+    <li class="ActiveCbl"><a href="../home/av/touching.html" target="frame">感人</a></li>
+    <li class="ActiveCbl"><a href="../home/av/VLOG.html" target="frame">VLOG</a></li>
+    <li class="ActiveCbl"><a href="../home/av/selfie.html" target="frame">自拍</a></li>
+    <li class="ActiveCbl"><a href="../home/av/beautifulScenery.html" target="frame">唯美风景</a></li>
+    <li class="ActiveCbl"><a href="../home/av/cartoon.html" target="frame">动画短片</a></li>
+{{/block}}
+
+{{block 'frame2'}}
+    <iframe name="frame" src="/funny" frameborder="0" width="100%" height="500px"></iframe>
+{{/block}}
+
+
+ 
+    
+
+
+
+
+                
+
+
+
+
+               
+
+
+
+            
+
+

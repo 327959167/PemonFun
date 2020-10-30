@@ -1,0 +1,48 @@
+{{extend '../../html/common-css/common-view/common.art'}}
+
+{{block 'title'}}
+    <title>柚乐趣图文页面</title>
+{{/block}}
+
+{{block 'navbar'}}
+    <li class="active"><a href="/graphic">图文</a></li>
+    <li><a href="/av">影音</a></li>
+    <li><a href="/other">其他</a></li>
+    <li><a href="#">新增</a></li>
+{{/block}}
+
+{{block 'frame'}}
+    <li class="ActiveCbl"><a href="/pet"  class="active"  target="frame">萌宠</a></li>
+    <li class="ActiveCbl"><a href="/feeling" target="frame">感悟</a></li>
+    <li class="ActiveCbl"><a href="/FilmCritics" target="frame">影评</a></li>
+{{/block}}
+
+{{block 'frame2'}}
+     <iframe name="frame" src="/pet" frameborder="0" width="100%" height="500px"></iframe>
+{{/block}}
+
+
+
+    
+
+
+
+
+
+
+      
+
+               
+
+
+
+
+
+
+              
+
+
+
+           
+
+

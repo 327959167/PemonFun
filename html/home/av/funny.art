@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funny</title>
+    <link rel="stylesheet" href="../../home/css/Horizontal-rotation.css">
+    <link rel="stylesheet" href="../../common-css/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="head">
+        <!-- 轮播图 -->
+        <div class="container1">
+            <ul class="picture">
+                <li class="item active">
+                    <a href="#"><img src="../../images/av/ShufflingFigure/1.jpg"></a>
+                </li>
+                <li class="item">
+                    <a href="#"><img src="../../images/av/ShufflingFigure/2.jpg"></a>
+                </li>
+                <li class="item">
+                    <a href="#"><img src="../../images/av/ShufflingFigure/3.jpg"></a>
+                </li>
+                <li class="item">
+                    <a href="#"><img src="../../images/av/ShufflingFigure/4.jpg"></a>
+                </li>
+                <li class="item">
+                    <a href="#"><img src="../../images/av/ShufflingFigure/5.jpg"></a>
+                </li>
+            </ul>
+            <ul class="pointList">
+                <li class="point active"></li>
+                <li class="point"></li>
+                <li class="point"></li>
+                <li class="point"></li>
+                <li class="point"></li>
+            </ul>
+            <button type="button" class="btn" id="goPre">&lt;</button>
+            <button type="button" class="btn" id="goNext">&gt;</button>
+        </div>
+        <!-- 视频部分 -->
+        <div class="vedio">
+            <ul>
+                {{each slts}}
+                     <li>
+                        <a href="#">
+                            <img src="{{$value.picture}}" alt="">
+                            <p>{{$value.text}}</p>
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <!-- 主体内容 -->
+    <div class="artic">
+        <ul class="Wul">
+            <!-- 11111 -->
+            <li class="Wli">
+                <div class="title">
+                    <div>影流之主<span>我常常因为自己不够沙雕而自卑(✪ω✪)</span></div>
+                </div>
+                <ul>
+                {{each artics}}
+                    <li>
+                        <a href="#">
+                            <img src={{$value.picture}} alt="">
+                            <p>{{$value.text}}</p>
+                            <div>
+                                <span class="glyphicon glyphicon-film">{{$value.watch}}</span>
+                                <span class="glyphicon glyphicon-download-alt">{{$value.comments}}</span>
+                            </div>
+                        </a>
+                    </li>
+                {{/each}}
+                </ul>
+            </li>
+            <!-- 22222 -->
+            <li class="Wli">
+                <div class="title">
+                    <div>沙雕高能<span>说我丑，唉，年纪轻轻眼睛就下了o(´^｀)o</span></div>
+                </div>
+                <ul>
+                {{each artics}}
+                    <li>
+                        <a href="#">
+                            <img src={{$value.picture}} alt="">
+                            <p>{{$value.text}}</p>
+                            <div>
+                                <span class="glyphicon glyphicon-film">{{$value.watch}}</span>
+                                <span class="glyphicon glyphicon-download-alt">{{$value.comments}}</span>
+                            </div>
+                        </a>
+                    </li>
+                {{/each}}
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script src="../../home/js/animation.js"></script>
+    <script src="../../home/js/Horizontal-rotation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../common-css/js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="../../common-css/bootstrap/css/bootstrap.min.css">
+    <title>交友自拍</title>
+    <style>
+        * {
+            margin: 0 !important;
+            padding: 0 !important;
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none !important;
+        }
+        
+        body {
+            background: url('../../home/images/selfie/bgc.jpg');
+            background-size: cover;
+        }
+        
+        .container {
+            width: 100%;
+            min-width: 615px;
+            padding-left: 10px !important;
+        }
+        
+        .container header {
+            width: 100%;
+            height: 100px;
+            border-bottom: 1px solid #a55eea;
+        }
+        /* 流光效果 */
+        
+        .logo {
+            width: 100px;
+            height: 80px;
+            float: left;
+            margin-top: 10px !important;
+            background: linear-gradient(to right, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+            border-radius: 10px;
+            background-size: 400%;
+            position: relative;
+        }
+        
+        .logo .Topcircle2 {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            position: absolute;
+            left: 25px;
+            top: 15px;
+        }
+        
+        .logo .Topcircle3 {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: linear-gradient(to right, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+            background-size: 400%;
+            position: absolute;
+            left: 42.5px;
+            top: 32.5px;
+        }
+        
+        .Topcircle3 {
+            animation: liuguang 5s linear infinite;
+        }
+        
+        .logo .sque {
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            left: 75px;
+            top: 5px;
+            background-color: #ffffff;
+        }
+        
+        .logo::after {
+            content: '';
+            position: absolute;
+            left: -5px;
+            right: -5px;
+            top: -5px;
+            bottom: -5px;
+            background: #ffffff;
+            border-radius: 15px;
+            background: linear-gradient(to right, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+            background-size: 400%;
+            z-index: -1;
+        }
+        
+        .logo:hover::after {
+            animation: liuguang 6s linear infinite;
+            filter: blur(10px);
+        }
+        
+        .logo:hover {
+            animation: liuguang 5s linear infinite;
+        }
+        
+        @keyframes liuguang {
+            100% {
+                background-position: -400% 0;
+            }
+        }
+        /* 流光效果 */
+        
+        .container header .title {
+            width: 80%;
+            height: 100px;
+            float: left;
+            padding: 10px !important;
+            box-sizing: border-box;
+            margin-left: 10px !important;
+        }
+        
+        .container header .title h2 {
+            font-weight: bolder;
+            margin-bottom: 20px !important;
+        }
+        
+        .container header .title span h5 {
+            text-indent: 2em;
+            display: inline-block;
+            font-weight: bold;
+        }
+        
+        .container header .title span label {
+            float: right;
+            margin-left: 20px !important;
+        }
+        
+        .container article .left {
+            width: 70%;
+            height: 100px !important;
+            float: left;
+        }
+        
+        .container article .left li {
+            padding-bottom: 15px !important;
+            box-sizing: border-box;
+            border-bottom: 1px solid #808e9b;
+        }
+        
+        .container article .left li {
+            margin-bottom: 60px !important;
+        }
+        
+        .container article .left h4 {
+            font-weight: bolder;
+            margin-top: 15px !important;
+        }
+        
+        .container article .left .txt {
+            margin-top: 10px !important;
+            text-indent: 2em;
+            display: -webkit-box;
+            overflow: hidden;
+            white-space: normal !important;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical
+        }
+        
+        .container article .left .pic ul {
+            height: 150px;
+            overflow: hidden;
+        }
+        
+        .container article .left .pic ul li {
+            margin-top: 10px !important;
+            width: 150px;
+            height: 150px;
+            float: left;
+            margin-right: 1% !important;
+            transition: 0.5s;
+        }
+        
+        .container article .left .pic ul li:hover {
+            transform: scale(1.4);
+        }
+        
+        .container article .left .pic ul li a img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+        
+        .container article .left .pic .author div {
+            float: left;
+            font-size: 16px;
+            margin-top: 20px !important;
+        }
+        
+        .container article .left .pic .author div:nth-of-type(2) {
+            float: right;
+            margin-right: 10% !important;
+        }
+        
+        .container article .left .pic .author div:nth-of-type(2) span {
+            margin-right: 20px !important;
+        }
+        
+        .container article .right {
+            width: 30%;
+            float: left;
+            padding: 10px;
+        }
+        
+        .container article .right ul {
+            margin-top: 20px !important;
+            margin-left: 5px !important;
+        }
+        
+        .container article .right ul li {
+            margin-top: 20px !important;
+        }
+        
+        .container article .right ul li span {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 25px;
+            font-size: 18px;
+            float: left;
+            color: #ffffff;
+            background-color: #808e9b;
+        }
+        
+        .container article .right ul li:nth-of-type(1) span {
+            background-color: #f53b57;
+        }
+        
+        .container article .right ul li:nth-of-type(2) span {
+            background-color: #f53b57;
+        }
+        
+        .container article .right ul li:nth-of-type(3) span {
+            background-color: #f53b57;
+        }
+        
+        .container article .right ul li a .picture img {
+            width: 100px;
+            height: 80px;
+            float: left;
+            margin: 0px 10px !important;
+            border-radius: 5px;
+            transition: all 0.5s linear;
+        }
+        
+        .container article .right ul li a .picture img:hover {
+            transform: rotate(360deg) scale(2);
+            transition: 0.5s;
+        }
+        
+        .container article .right ul li a .instru {
+            height: 80px;
+            overflow: hidden;
+        }
+        
+        .container article .right ul li a .instru .title1 {
+            font-weight: bolder;
+            margin-bottom: 5px !important;
+        }
+        
+        .container article .right ul li a .instru .title2 {
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+
+            <div class="logo">
+                <div class="sque"></div>
+                <div class="Topcircle2"></div>
+                <div class="Topcircle3"></div>
+            </div>
+
+
+
+
+            <div class="title">
+                <h2>交友自拍</h2>
+                <span>
+                    <h5>秀出迷人的自己</h5>
+                    <label>今日新增:<mark>60</mark></label>
+                    <label>帖子总数:<mark>288</mark></label>
+                </span>
+            </div>
+        </header>
+
+        <article>
+            <!-- 左侧展示帖子 -->
+            <ul class="left">
+
+                <li>
+                    <h4>秀出我自己</h4>
+                    <div class="txt">
+                        我的名字叫谢福荣。毕业于陈村镇中学。口头禅系臭HI啊!本人热爱祖国，团结合作，热爱班级体。喜欢街头文化。特别系喜欢看古惑仔。喜欢各种运动。喜欢街舞，美术(素描人物)。性格外向+内向。学习一般拉。外貌也一般般。最爱理科。最喜欢的偶像系达叔。
+                    </div>
+                    <div class="container pic">
+                        <ul class="row">
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (1).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (1).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (1).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (1).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (1).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (1).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (1).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="author">
+                            <div class="glyphicon glyphicon-user"> 清风徐徐</div>
+                            <div>
+                                <span class="glyphicon glyphicon-eye-open"><mark>60</mark></span>
+                                <span class="glyphicon glyphicon-list-alt"><mark>12</mark></span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <h4>秀出我自己</h4>
+                    <div class="txt">
+                        我的名字叫谢福荣。毕业于陈村镇中学。口头禅系臭HI啊!本人热爱祖国，团结合作，热爱班级体。喜欢街头文化。特别系喜欢看古惑仔。喜欢各种运动。喜欢街舞，美术(素描人物)。性格外向+内向。学习一般拉。外貌也一般般。最爱理科。最喜欢的偶像系达叔。
+                    </div>
+                    <div class="container pic">
+                        <ul class="row">
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (3).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (3).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (3).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (3).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (3).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (3).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="author">
+                            <div class="glyphicon glyphicon-user"> 清风徐徐</div>
+                            <div>
+                                <span class="glyphicon glyphicon-eye-open"><mark>60</mark></span>
+                                <span class="glyphicon glyphicon-list-alt"><mark>12</mark></span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <h4>秀出我自己</h4>
+                    <div class="txt">
+                        我的名字叫谢福荣。毕业于陈村镇中学。口头禅系臭HI啊!本人热爱祖国，团结合作，热爱班级体。喜欢街头文化。特别系喜欢看古惑仔。喜欢各种运动。喜欢街舞，美术(素描人物)。性格外向+内向。学习一般拉。外貌也一般般。最爱理科。最喜欢的偶像系达叔。
+                    </div>
+                    <div class="container pic">
+                        <ul class="row">
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (4).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (4).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (4).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (4).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (4).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (4).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="author">
+                            <div class="glyphicon glyphicon-user"> 清风徐徐</div>
+                            <div>
+                                <span class="glyphicon glyphicon-eye-open"><mark>60</mark></span>
+                                <span class="glyphicon glyphicon-list-alt"><mark>12</mark></span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <h4>秀出我自己</h4>
+                    <div class="txt">
+                        我的名字叫谢福荣。毕业于陈村镇中学。口头禅系臭HI啊!本人热爱祖国，团结合作，热爱班级体。喜欢街头文化。特别系喜欢看古惑仔。喜欢各种运动。喜欢街舞，美术(素描人物)。性格外向+内向。学习一般拉。外貌也一般般。最爱理科。最喜欢的偶像系达叔。
+                    </div>
+                    <div class="container pic">
+                        <ul class="row">
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (5).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (5).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (5).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (5).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (5).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (5).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="author">
+                            <div class="glyphicon glyphicon-user"> 清风徐徐</div>
+                            <div>
+                                <span class="glyphicon glyphicon-eye-open"><mark>60</mark></span>
+                                <span class="glyphicon glyphicon-list-alt"><mark>12</mark></span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <h4>秀出我自己</h4>
+                    <div class="txt">
+                        我的名字叫谢福荣。毕业于陈村镇中学。口头禅系臭HI啊!本人热爱祖国，团结合作，热爱班级体。喜欢街头文化。特别系喜欢看古惑仔。喜欢各种运动。喜欢街舞，美术(素描人物)。性格外向+内向。学习一般拉。外貌也一般般。最爱理科。最喜欢的偶像系达叔。
+                    </div>
+                    <div class="container pic">
+                        <ul class="row">
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (6).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (6).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (6).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (6).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (6).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (6).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="author">
+                            <div class="glyphicon glyphicon-user"> 清风徐徐</div>
+                            <div>
+                                <span class="glyphicon glyphicon-eye-open"><mark>60</mark></span>
+                                <span class="glyphicon glyphicon-list-alt"><mark>12</mark></span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <h4>秀出我自己</h4>
+                    <div class="txt">
+                        我的名字叫谢福荣。毕业于陈村镇中学。口头禅系臭HI啊!本人热爱祖国，团结合作，热爱班级体。喜欢街头文化。特别系喜欢看古惑仔。喜欢各种运动。喜欢街舞，美术(素描人物)。性格外向+内向。学习一般拉。外貌也一般般。最爱理科。最喜欢的偶像系达叔。
+                    </div>
+                    <div class="container pic">
+                        <ul class="row">
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (7).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (7).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (7).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (7).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (7).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+
+                            <li class="col-lg-12 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#">
+                                    <img src="../../home/images/selfie/beauty/woman (7).jpg" alt="图片丢失了">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="author">
+                            <div class="glyphicon glyphicon-user"> 清风徐徐</div>
+                            <div>
+                                <span class="glyphicon glyphicon-eye-open"><mark>60</mark></span>
+                                <span class="glyphicon glyphicon-list-alt"><mark>12</mark></span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- 右侧热门帖子 -->
+            <div class="right">
+                <h3>最近热门</h3>
+                <ul>
+                    <li>
+                        <span>1</span>
+                        <a href="#">
+                            <div class="picture">
+                                <img src="../../home/images/selfie/beauty/woman (12).jpg">
+                            </div>
+                            <div class="instru">
+                                <div class="title1">春江潮水连海平，海上明月共潮生。</div>
+                                <div class="title2">独在异乡为异客，每逢佳节倍思亲。遥知兄弟登高处，遍插茱萸少一人。</div>
+
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <span>2</span>
+                        <a href="#">
+                            <div class="picture">
+                                <img src="../../home/images/selfie/beauty/woman (13).jpg">
+                            </div>
+                            <div class="instru">
+                                <div class="title1">春江潮水连海平，海上明月共潮生。</div>
+                                <div class="title2">独在异乡为异客，每逢佳节倍思亲。遥知兄弟登高处，遍插茱萸少一人。</div>
+
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <span>3</span>
+                        <a href="#">
+                            <div class="picture">
+                                <img src="../../home/images/selfie/beauty/woman (14).jpg">
+                            </div>
+                            <div class="instru">
+                                <div class="title1">春江潮水连海平，海上明月共潮生。</div>
+                                <div class="title2">独在异乡为异客，每逢佳节倍思亲。遥知兄弟登高处，遍插茱萸少一人。</div>
+
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <span>4</span>
+                        <a href="#">
+                            <div class="picture">
+                                <img src="../../home/images/selfie/beauty/woman (15).jpg">
+                            </div>
+                            <div class="instru">
+                                <div class="title1">春江潮水连海平，海上明月共潮生。</div>
+                                <div class="title2">独在异乡为异客，每逢佳节倍思亲。遥知兄弟登高处，遍插茱萸少一人。</div>
+
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <span>5</span>
+                        <a href="#">
+                            <div class="picture">
+                                <img src="../../home/images/selfie/beauty/woman (16).jpg">
+                            </div>
+                            <div class="instru">
+                                <div class="title1">春江潮水连海平，海上明月共潮生。</div>
+                                <div class="title2">独在异乡为异客，每逢佳节倍思亲。遥知兄弟登高处，遍插茱萸少一人。</div>
+
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <span>6</span>
+                        <a href="#">
+                            <div class="picture">
+                                <img src="../../home/images/selfie/beauty/woman (11).jpg">
+                            </div>
+                            <div class="instru">
+                                <div class="title1">春江潮水连海平，海上明月共潮生。</div>
+                                <div class="title2">独在异乡为异客，每逢佳节倍思亲。遥知兄弟登高处，遍插茱萸少一人。</div>
+
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <span>7</span>
+                        <a href="#">
+                            <div class="picture">
+                                <img src="../../home/images/selfie/beauty/woman (10).jpg">
+                            </div>
+                            <div class="instru">
+                                <div class="title1">春江潮水连海平，海上明月共潮生。</div>
+                                <div class="title2">独在异乡为异客，每逢佳节倍思亲。遥知兄弟登高处，遍插茱萸少一人。</div>
+
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <span>8</span>
+                        <a href="#">
+                            <div class="picture">
+                                <img src="../../home/images/selfie/beauty/woman (9).jpg">
+                            </div>
+                            <div class="instru">
+                                <div class="title1">春江潮水连海平，海上明月共潮生。</div>
+                                <div class="title2">独在异乡为异客，每逢佳节倍思亲。遥知兄弟登高处，遍插茱萸少一人。</div>
+
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

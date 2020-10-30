@@ -1,0 +1,43 @@
+{{extend '../../html/common-css/common-view/common.art'}}
+
+{{block 'title'}}
+     <title>柚乐趣其他页面</title>
+{{/block}}
+
+{{block 'navbar'}}
+    <li><a href="/graphic">图文</a></li>
+    <li><a href="/av">影音</a></li>
+    <li class="active"><a href="/other">其他</a></li>
+    <li><a href="#">新增</a></li>
+{{/block}}
+
+{{block 'frame'}}
+    <li class="ActiveCbl"><a href="#" class="active" target="frame">美图</a></li>
+    <li class="ActiveCbl"><a href="#" target="frame">交友</a></li>
+    <li class="ActiveCbl"><a href="#" target="frame">留言</a></li>
+    <li class="ActiveCbl"><a href="#" target="frame">游戏分享</a></li>
+    <li class="ActiveCbl"><a href="#" target="frame">表白墙</a></li>
+    <li class="ActiveCbl"><a href="#" target="frame">漂流瓶</a></li>
+    <li class="ActiveCbl"><a href="#" target="frame">打赏我们</a></li>
+{{/block}}
+
+{{block 'frame2'}}
+     <iframe name="frame" src="" frameborder="0" width="100%" height="500px"></iframe>
+{{/block}}
+
+
+
+
+
+   
+   
+
+
+    
+                
+            
+
+
+
+                
+            

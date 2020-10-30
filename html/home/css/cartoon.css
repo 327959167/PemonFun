@@ -1,0 +1,234 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #e67e22;
+}
+
+
+/* 焦点图 */
+
+#show {
+    position: relative;
+    height: 320px;
+    width: 960px;
+    margin: 0 auto;
+}
+
+#show a {
+    float: left;
+    display: inline;
+}
+
+#show .img {
+    position: absolute;
+    width: 960px;
+    height: 320px;
+    overflow: hidden
+}
+
+#show .img SPAN {
+    position: absolute;
+    width: 19999px;
+    display: block
+}
+
+#show .btns {
+    z-index: 10;
+    position: absolute;
+    width: 960px
+}
+
+#show .btns B {
+    position: absolute;
+    width: 100px;
+    display: block;
+    height: 14px;
+    overflow: hidden;
+    top: 295px;
+    left: 50%
+}
+
+#show .btns B I {
+    width: 10px;
+    background: #414140;
+    float: left;
+    height: 10px;
+    font-size: 0px;
+    overflow: hidden;
+    cursor: pointer;
+    margin-right: 6px;
+    border: #414140 2px solid;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px
+}
+
+#show .btns B I:hover {
+    background: #a7a7a6
+}
+
+#show .btns B I.on {
+    background: #3cd2f1;
+    cursor: default
+}
+
+#show .btns B I.on:hover {
+    background: #3cd2f1;
+    cursor: default
+}
+
+#show .btns S {
+    position: absolute;
+    WIDTH: 60px;
+    display: none;
+    height: 80px;
+    overflow: hidden;
+    top: 130px;
+    cursor: pointer
+}
+
+#show .btns S I {
+    position: absolute;
+    width: 60px;
+    background: url(../images/cartoon/btn_show.png);
+    height: 160px;
+    _filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="../images/cartoon/btn_show.png");
+    _background: none;
+}
+
+#show .btns S.prev {
+    left: 0px
+}
+
+#show .btns S.prev I {
+    top: -80px
+}
+
+#show .btns S.next {
+    right: 0px
+}
+
+.show-hover#show .btns S {
+    display: block
+}
+
+.masks {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    height: 320px;
+    position: absolute;
+    background: #000;
+    overflow: hidden
+}
+
+
+/* 主体内容 */
+
+
+/* 内容1 */
+
+a {
+    text-decoration: none !important;
+    color: #3498db;
+}
+
+.article {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.article1 ul {
+    height: 220px;
+    overflow: hidden;
+}
+
+.article ul li {
+    width: 230px;
+    height: 190px;
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: bold;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    float: left;
+    margin-right: 20px;
+}
+
+.article ul li:nth-of-type(5n) {
+    margin-right: 0;
+}
+
+.article ul li .picture {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.article ul li:hover {
+    transform: scale(1.1);
+    color: #e67e22;
+}
+
+
+/* 内容2 */
+
+.article2 ul {
+    height: 420px;
+    overflow: hidden;
+}
+
+.article2 h2 span {
+    font-size: 16px;
+    margin-left: 20px;
+    color: #e67e22;
+}
+
+
+/* 内容三 */
+
+.article3 ul {
+    height: 800px;
+    overflow: hidden;
+}
+
+.article3 ul li {
+    width: 230px;
+    height: 390px;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    float: left;
+    margin-right: 20px;
+}
+
+.article3 ul li .picture {
+    width: 100%;
+    height: 320px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}

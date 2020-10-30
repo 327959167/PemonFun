@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./images/logoTitle.jpg" rel="shortcut icon">
+    <title>柚乐趣注册页面</title>
+    <script src="../common-css/js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="../common-css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="../common-css/login-register.css">
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="container registerBox">
+            <form class="formBox" enctype="multipart/form-data">
+                <h1>柚乐趣账号注册</h1>
+                <div class="form-group">
+                    <!-- 用户名 -->
+                    <div class="input-group">
+                        <div class="input-group-addon">昵称</div>
+                        <input type="txt" class="form-control nickname" name="nickName" placeholder="Please enter you username">
+                    </div>
+                    <!-- 用户名 -->
+                    <!-- 邮箱 -->
+                    <div class="input-group">
+                        <div class="input-group-addon">邮箱</div>
+                        <input type="email" class="form-control email" name="email" placeholder="Please enter you email">
+                    </div>
+                    <!-- 邮箱 -->
+                    <!-- 密码 -->
+                    <div class="input-group">
+                        <div class="input-group-addon">密码</div>
+                        <input type="password" class="form-control password" name="password" placeholder="Please enter you password">
+                    </div>
+                    <!-- 密码 -->
+                    <!-- 确认密码 -->
+                    <div class="input-group">
+                        <div class="input-group-addon">确认密码</div>
+                        <input type="password" class="form-control passwordConfirm" placeholder="Please enter you confirm password">
+                    </div>
+                    <!-- 确认密码 -->
+                    <!-- 选择头像 -->
+                    <div class="input-group">
+                        <div class="input-group-addon">选择头像</div>
+                        <input type="file" class="form-control Headportrait" name="HeadPortrait" id="upload" value="haha">
+                    </div>
+                    <!-- 选择头像 -->
+                    <!-- 验证码 -->
+                    <div class="input-group" id="box2">
+                        <div class="input-group-addon">图形验证码：</div>
+                        <input type="tel" class="form-control VerificationCode" placeholder="请输入图形验证码" />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span><canvas id="canvas" width="120" height="45"></canvas>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="#" id="changeImg">看不清，换一张</a></span>
+                    </div>
+                    <!-- 验证码 -->
+                </div>
+                <div id="error">
+                    <span class="errorTxt">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span> <span>！！！ </span>
+                </div>
+                <br>
+                <br>
+                <a href="#" type="button" class="btn btn-primary btn-lg btn-block register">注册</a>
+            </form>
+        </div>
+    </div>
+    <script src="../register/js/register.js"></script>
+    <script src="../register/js/registerCheck.js"></script>
+    <script src="../register/js/UserHead.js"></script>
+</body>
+
+</html>

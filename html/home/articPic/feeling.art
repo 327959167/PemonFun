@@ -1,0 +1,42 @@
+<script src="../../common-css/js/loginFlag.js"></script>
+<noscript> 
+    对不起，由于您的浏览器禁用了javascript，你暂时无法对此网站进行任何数据的操作网站！ 
+</noscript>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../common-css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../home/css/feeling.css">
+</head>
+
+<body>
+    <ul class="ul">
+        {{each fell}}
+             <li>
+                <div class="left">
+                    <img src=" {{$value.HeadPortrait}}" alt="">
+                </div>
+                <div class="right">
+                    <a href="#" class="title">
+                        {{$value.title}}
+                    </a>
+                    <div class="text">
+                        {{$value.text}}
+                    </div>
+                    <div class="logo">
+                        <label for=""><span>{{$value.logo}}</span></label>
+                        <label for=""><span class="glyphicon glyphicon-list-alt">{{$value.vedio}}</span></label>
+                    </div>
+                </div>
+            </li>
+        {{/each}}    
+    </ul>
+</body>
+
+</html>

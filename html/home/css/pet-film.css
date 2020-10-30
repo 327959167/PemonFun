@@ -1,0 +1,35 @@
+.ul {
+    margin: 0 auto;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.ul li {
+    width: 280px;
+    padding: 3px;
+    list-style: none;
+    float: left;
+    cursor: pointer;
+    border: 1px solid teal;
+    box-shadow: 0 4px 8px 0 #ACDFEF, 0 6px 20px 0 #6DECF2;
+    transition: .5s;
+}
+
+.ul li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px 0 #ffeb3b, 0 6px 20px 0 #f441a5;
+}
+
+.ul li img {
+    width: 100%;
+}
+
+.ul li .author {
+    float: right;
+}
+
+.ul li .authorTxt p {
+    text-indent: 25px;
+    font-size: 16px;
+    margin-top: 5px;
+}

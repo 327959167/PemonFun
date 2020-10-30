@@ -1,0 +1,138 @@
+<script src="../../common-css/js/loginFlag.js"></script>
+<noscript> 
+    对不起，由于您的浏览器禁用了javascript，你暂时无法对此网站进行任何数据的操作网站！ 
+</noscript>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../home/images/logoTitle.png" rel="shortcut icon">
+
+    <!-- 1.title要填写 -->
+    {{block 'title'}}{{/block}}
+    <!-- 1.title要填写 -->
+
+    <script src="../../common-css/js/jquery-3.4.1.min.js"></script>
+    <script src="../../common-css/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../common-css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../home/css/home.css">
+</head>
+
+<body>
+    <!-- 导航条 -->
+    <header class="headBox">
+        <nav class="navbar navbar-inverse navBox" role="navigation">
+            <div class="container-fluid">
+                <!-- 头部标题、图片 -->
+                <div class="navbar-header picTitle">
+                    <span class="navbar-brand"> <img id="picture" src="../../home/images/logoTitle.png" alt=""></span>
+                    <span class="navbar-brand title"><em> 柚乐趣</em></span>
+                </div>
+                <!-- 头部标题、图片 -->
+                <div class="collapse navbar-collapse">
+                    <!-- 头部导航 -->
+                    <ul class="nav navbar-nav" id="HeadNav">
+
+                        <!-- 1.title要填写 -->
+                        {{block 'navbar'}}{{/block}}
+                        <!-- 1.title要填写 -->
+
+
+                    </ul>
+                    <!-- 头部导航 -->
+                    <!-- 搜索框 -->
+                    <form class="navbar-form navbar-left searchBox">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">搜索</button>
+                    </form>
+                    <!-- 搜索框 -->
+                    <!-- 右侧头像、信息修改、退出 -->
+                    <ul class="nav navbar-nav navbar-right picAndLoginout">
+                        <li class="pic">
+                            <img src="../../images/UsersHead/xiaohui.png" alt="图片不见了啊" id="HeadPortrait">
+                        </li>
+                        <li class="dropdown loginOut">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="nickName">
+                                <!-- 2.昵称的处理 -->
+                                <!-- 2.昵称的处理 -->
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="javascript:update()">个人详情与修改</a></li>
+                                <li><a href="#">管理员</a></li>
+                                <li><a href="#">博主</a></li>
+                                <li><a href="#">联系博主</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="javascript:loginout()">退出登录</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- 右侧头像、信息修改、退出 -->
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- 导航条 -->
+    <!-- 侧边栏 -->
+    <div class="cbl">
+        <aside>
+            <ul>
+
+                <!-- 3.侧边栏导航 -->
+                {{block 'frame'}}{{/block}}
+                <!-- 3.侧边栏导航 -->
+
+            </ul>
+        </aside>
+        <!-- 主体内容 -->
+        <article>
+            <div class="textBox">
+
+                <!-- 4.侧边栏第一显示内容 -->
+                {{block 'frame2'}}{{/block}}
+                <!-- 4.侧边栏第一显示内容 -->
+
+            </div>
+        </article>
+        <!-- 分页 -->
+        <div class="page">
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- 侧边栏 -->
+    <!-- 底部 -->
+    <div class="footer">
+        <tfoot class="tf">
+            <p>柚乐趣个人博客</p>
+        </tfoot>
+    </div>
+    <!-- 底部 -->
+</body>
+<script src="../../home/js/search.js"></script>
+<script src="../../home/js/aside.js"></script>
+<script src="../../common-css/common-view/common.js"></script>
+
+</html>

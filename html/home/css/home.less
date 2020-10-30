@@ -1,0 +1,187 @@
+ul {
+  list-style: none;
+}
+
+body {
+  min-width: 1000px;
+  overflow: hidden;
+}
+
+.headBox {
+  .navBox {
+    height: 65px;
+    border-radius: 0;
+
+    .picTitle {
+      height: 65px;
+      margin-left: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        #picture {
+          width: 50px;
+          height: 50px;
+          box-sizing: border-box;
+          margin: -18px -10px;
+        }
+      }
+    }
+
+    #HeadNav li a {
+      font-size: 18px !important;
+      line-height: 32.5px;
+    }
+
+    #HeadNav li:first-of-type {
+      margin-left: 20px;
+    }
+
+    .searchBox {
+      height: 45px;
+      margin: 15px;
+    }
+
+    .picAndLoginout {
+      position: absolute;
+      right: 30px;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .pic {
+        img {
+          width: 50px;
+          height: 50px;
+          margin: 5px 0px;
+          border-radius: 50%;
+        }
+      }
+
+      #nickName {
+        cursor: pointer;
+        font-size: 18px;
+
+      }
+    }
+  }
+}
+
+// 侧边栏
+.cbl {
+  position: relative;
+  height: 500px;
+
+  .active {
+    background-color: pink;
+  }
+
+  aside {
+    ul {
+      padding: 0;
+      margin: 0 10px;
+
+      li:first-of-type a {
+        border-top: none;
+      }
+
+      li {
+        a {
+          display: block;
+          width: 15%;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          cursor: pointer;
+          background-color: teal;
+          border-top: 1px solid gray;
+          font-size: 18px;
+          letter-spacing: 3px;
+          color: #fff;
+          text-decoration: none;
+
+
+        }
+      }
+
+      li>a:hover {
+        background-color: pink;
+      }
+    }
+  }
+
+  article {
+    .textBox {
+      width: 82%;
+      height: 500px;
+      margin: 0% 1%;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      .ul {
+        margin: 0px auto 0 auto;
+        padding: 0;
+        position: relative;
+        transition: all .5s;
+
+        li:hover {
+          transform: scale(1.05);
+        }
+
+        li {
+          width: 300px;
+          padding: 5px;
+          position: absolute;
+          list-style: none;
+          float: left;
+          cursor: pointer;
+          border: 1px solid teal;
+          box-shadow: 0 4px 8px 0 #ACDFEF, 0 6px 20px 0 #6DECF2;
+
+
+
+          img {
+            width: 100%;
+          }
+
+          .author {
+            float: right;
+          }
+
+          .authorTxt p {
+            text-indent: 25px;
+            font-size: 14px;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  // page
+  .page {
+    width: 300px;
+    height: 60px;
+    position: absolute;
+    right: 0px;
+    top: 500px;
+  }
+
+}
+
+// footer
+.footer {
+  width: 100%;
+  height: 72px;
+  background-color: lightgray;
+  margin-top: 65px;
+
+  p {
+    font-size: 20px;
+    text-align: center;
+    line-height: 60px;
+  }
+}

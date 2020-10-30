@@ -1,0 +1,36 @@
+<script src="../../common-css/js/loginFlag.js"></script>
+<noscript> 
+    对不起，由于您的浏览器禁用了javascript，你暂时无法对此网站进行任何数据的操作网站！ 
+</noscript>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../home/css/pet-film.css">
+</head>
+
+<body>
+    <ul class="ul">
+        {{each pets}}
+            <li>
+                <img src="{{$value.HeadPortrait}}" alt="">
+                <h3>{{$value.title}}</h3>
+                <div class="author">
+                    <span>来自： </span><span><mark>{{$value.author}}</mark></span>
+                </div>
+                <br>
+                <div class="authorTxt">
+                    <p>{{$value.authorTxt}}</p>
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+    <script src="../../home/js/article_lists.js"></script>
+</body>
+
+</html>

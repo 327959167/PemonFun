@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none !important;
+  color: #000000;
+}
+a:hover {
+  color: #3498db;
+}
+.box {
+  width: 1000px;
+}
+.box .left {
+  width: 1000px;
+}
+.box .left .leftHead h3 {
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  line-height: 30px;
+}
+.box .left .leftHead h3 span {
+  display: inline-block;
+  margin-right: 15px;
+  margin-top: 5px;
+  color: #e67e22;
+}
+.box .left .ulbox {
+  margin: 10px !important;
+  padding: 0 !important;
+}
+.box .left .ulbox ul {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+.box .left .ulbox ul li {
+  width: 200px;
+  height: 100%;
+  float: left;
+  margin-right: 1px;
+}
+.box .left .ulbox ul li img {
+  width: 100%;
+  height: 100px;
+}
+.box .left .ulbox ul li .title {
+  margin: 5px 0px;
+  font-size: 12px;
+}
+.box .left .ulbox ul li .video span {
+  margin-right: 10px;
+  color: #98A2AA;
+}
+.box .left .MianBody .title {
+  font-size: 18px;
+}
+.box .left .MianBody ul li {
+  height: 220px;
+  width: 500px;
+  float: left;
+  border-top: 1px solid #e5e9ef;
+}
+.box .left .MianBody ul li:nth-of-type(2n) {
+  border-left: 1px solid #e5e9ef;
+}
+.box .left .MianBody ul li:nth-of-type(2n) .left {
+  margin-left: 20px;
+}
+.box .left .MianBody ul li .left {
+  width: 180px;
+  height: 120px;
+  float: left;
+  margin: 5px;
+  margin-top: 20px;
+}
+.box .left .MianBody ul li .left img {
+  width: 100%;
+  height: 100%;
+}
+.box .left .MianBody ul li .right {
+  width: 280px;
+  height: 160px;
+  float: left;
+  margin: 5px;
+  margin-top: 20px;
+  position: relative;
+}
+.box .left .MianBody ul li .right .title {
+  font-size: 14px;
+  color: #222;
+}
+.box .left .MianBody ul li .right .title:hover {
+  color: #3498db;
+}
+.box .left .MianBody ul li .right .text {
+  margin-top: 20px;
+  color: #A6A2AA;
+  font-size: 12px;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.box .left .MianBody ul li .right .logo {
+  color: #A6A2AA;
+  margin-top: 35px;
+  font-size: 12px;
+}
+.box .left .MianBody ul li .right .logo label {
+  margin-right: 30px;
+}
+.right {
+  width: 230px;
+  position: absolute;
+  margin-left: 1000px;
+  float: left;
+}
+.right .title {
+  height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+}
+.right ul {
+  margin-top: 10px;
+}
+.right ul li {
+  width: 100%;
+  margin-top: 20px;
+  height: 55px;
+}
+.right ul li .sum {
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+  float: left;
+  border-radius: 5px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #fd79a8;
+}
+.right ul li a {
+  float: left;
+}
+.right ul li a img {
+  width: 80px;
+  height: 50px;
+  border-radius: 5px;
+}
+.right ul li a .title {
+  clear: both;
+  width: 120px;
+  margin-left: 5px;
+  font-size: 12px;
+  line-height: 15px;
+  float: right;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.right ul li a .score {
+  clear: both;
+  float: right;
+  width: 120px;
+  margin-left: 5px;
+  color: #A6A2AA;
+  margin-top: -15px;
+  font-size: 12px;
+}

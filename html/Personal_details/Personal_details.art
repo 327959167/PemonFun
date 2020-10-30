@@ -1,0 +1,102 @@
+<script src="../common-css/js/loginFlag.js"></script>
+<noscript> 
+    对不起，由于您的浏览器禁用了javascript，你暂时无法对此网站进行任何数据的操作网站！ 
+</noscript>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./images/logoTitle.jpg" rel="shortcut icon">
+    <title>个人详情页</title>
+    <script src="../common-css/js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="../common-css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Personal_details/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Personal_details/css/Personal_details.css">
+    <link rel="stylesheet" href="../common-css/login-register.css">
+</head>
+
+<body>
+    <div class="container form-horizontal personBox">
+        <!-- 头像 -->
+        <div class="UserPic">
+            <img src="../login/images/logoTitle2.jpg" alt="未上传头像" id="UserHead">
+        </div>
+        <!-- 表单 -->
+        <div class="formBox" enctype="multipart/form-data">
+
+            <!-- 邮箱 -->
+            <div class="form-group">
+                <label class="col-sm-1 control-label">邮箱</label>
+                <div class="col-sm-10 ">
+                    <input type="email" class="form-control email" name="email"  disabled>
+                </div>
+            </div>
+            <!-- 邮箱 -->
+
+            <!-- 昵称 -->
+            <div class="form-group">
+                <label class="col-sm-1 control-label">昵称</label>
+                <div class="col-sm-10 ">
+                    <input type="text" class="form-control nickname" name="nickName" placeholder="Please enter you nickName" readonly>
+                </div>
+            </div>
+            <!-- 昵称 -->
+
+            <!-- 密码 -->
+            <div class="form-group">
+                <label class="col-sm-1 control-label">新密码</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control password" name="password" placeholder="Please enter you  password" readonly>
+                </div>
+                <label class="col-sm-1" id="fafa">
+                    <i class="fa fa-eye-slash" aria-hidden="true" id="eye"></i>
+                </label>
+            </div>
+            <!-- 密码 -->
+
+            <!-- 确认密码 -->
+            <div class="form-group">
+                <label class="col-sm-1 control-label">确认密码</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control passwordConfirm" readonly placeholder="Please enter you confirm password">
+                </div>
+                <label class="col-sm-1" id="fafa">
+                    <i class="fa fa-eye-slash" aria-hidden="true" id="eye2"></i>
+                </label>
+            </div>
+            <!-- 确认密码 -->
+
+            <!-- 头像上传 -->
+            <div class="form-group">
+                <label class="col-sm-1 control-label">头像</label>
+                <div class="col-sm-10">
+                    <input type="file" class="form-control picture" disabled id="upload">
+                </div>
+            </div>
+            <!-- 头像上传 -->
+
+            <!-- 文本提示框 -->
+            <div class="form-group">
+                <label class="col-sm-4 control-label"></label>
+                <div class="col-sm-8 errorTxt"></div>
+            </div>
+            <!-- 文本提示框 -->
+
+            <!-- 按钮 -->
+            <div class="form-group">
+                <label class="col-sm-1 control-label"></label>
+                <button class="btn btn-info" id="updata">修改</button>
+                <button class="btn btn-info" id="cancle">取消</button>
+                <input type="submit" class="btn btn-info" value="确定" id="sure">
+            </div>
+        </div>
+    </div>
+    <script src="../Personal_details/js/Personal.js"></script>
+    <script src="../Personal_details/js/Personal_details.js"></script>
+    <script src="../Personal_details/js/updataPicture.js"></script>  
+</body>
+
+</html>

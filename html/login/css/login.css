@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('../images/login.jpg');
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+}
+
+body .box {
+    position: relative;
+}
+
+body .box .loginBox {
+    width: 40%;
+    height: 500px;
+    min-width: 400px;
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    border: 1px solid teal;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: black;
+    font-weight: bold;
+}
+
+body .box .loginBox .Oimg {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    border-radius: 50%;
+}
+
+body .box .loginBox .txt {
+    width: 60%;
+    height: 100px;
+    margin-left: 40%;
+    text-align: center;
+}
+
+body .box .loginBox .loginForm {
+    margin-top: 10px;
+    padding: 20px 20px;
+    border-radius: 10px;
+    color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-image: linear-gradient(to bottom right, #55C5CE, #37B9E9);
+}
+
+body .box .loginBox .loginForm div:nth-child(1) {
+    margin-top: 30px;
+}
+
+body .box .loginBox .loginForm div {
+    margin-top: 40px;
+}
+
+body .box .loginBox .loginForm .Input {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+body .box .loginBox .loginForm a {
+    margin: 30px 30px;
+    width: 30%;
+}
+
+body .box .loginBox .loginForm .sub {
+    margin: 30px 30px;
+    width: 30%;
+}
